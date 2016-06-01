@@ -40,7 +40,7 @@
 
 @interface RMPickerViewController ()
 
-@property (nonatomic, readwrite, strong) UIPickerView *picker;
+@property (nonatomic, readwrite, strong) PickerWithPointer *picker;
 @property (nonatomic, weak) NSLayoutConstraint *pickerHeightConstraint;
 
 @end
@@ -51,7 +51,7 @@
 - (instancetype)initWithStyle:(RMActionControllerStyle)style title:(NSString *)aTitle message:(NSString *)aMessage selectAction:(RMAction *)selectAction andCancelAction:(RMAction *)cancelAction {
     self = [super initWithStyle:style title:aTitle message:aMessage selectAction:selectAction andCancelAction:cancelAction];
     if(self) {
-        self.picker = [[UIPickerView alloc] initWithFrame:CGRectZero];
+        self.picker = [[PickerWithPointer alloc] initWithFrame:CGRectZero];
         self.picker.translatesAutoresizingMaskIntoConstraints = NO;
         
         self.pickerHeightConstraint = [NSLayoutConstraint constraintWithItem:self.picker attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
