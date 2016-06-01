@@ -25,7 +25,7 @@
 //
 
 #import <RMActionController/RMActionController.h>
-
+#import "PickerWithPointer.h"
 /**
  *  RMPickerViewController is an iOS control for selecting a row using UIPickerView in a UIActionSheet like fashion. When a RMPickerViewController is shown the user gets the opportunity to select some rows using a UIPickerView.
  *  
@@ -42,6 +42,6 @@
 /**
  *  Will return the instance of UIPickerView that is used.
  */
-@property (nonatomic, readonly) UIPickerView *picker;
+@property (nonatomic, readonly) PickerWithPointer *picker;
 
 @end
